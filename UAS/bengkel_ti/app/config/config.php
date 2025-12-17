@@ -7,4 +7,4 @@ define('DB_PORT', '5432');      // Port default Postgres
 define('DB_USER', 'postgres');  // Ganti dengan username postgres anda
 define('DB_PASS', 'password');  // Ganti dengan password postgres anda
 define('DB_NAME', 'uas_basis_data');
-define('DB_DRIVER', 'pgsql');   // Ganti driver ke pgsql
+define('DB_DRIVER', 'pgsql');   // Driver diganti ke pgsql
