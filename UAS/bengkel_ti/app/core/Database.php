@@ -2,17 +2,22 @@
 
 class Database {
     private $host = DB_HOST;
+    private $port = DB_PORT;
     private $user = DB_USER;
     private $pass = DB_PASS;
     private $db_name = DB_NAME;
+    private $driver = DB_DRIVER;
 
     private $dbh;
     private $db;
     private $stmt;
 
-    public function __construct() {
-        // data source name
-        $dsn ='mysql:host=' . $this->host . ';dbname=' . $this->db_name;
+   public function __construct() {
+        // Data Source Name untuk PostgreSQL
+        // Format: pgsql:host=localhost;port=5432;dbname=uas_basis_data
+        $dsn = $this->driver . ':host=' . $this->host . ';port=' . $this->port . ';dbname=' . $this->db_name;
+
+        $option = [
 
         $option = [
             PDO::ATTR_PERSISTENT => true,
@@ -82,6 +87,7 @@ public function fetch($fetchStyle = PDO::FETCH_ASSOC)
     $this->execute(); // Eksekusi statement sebelum fetch
     return $this->stmt->fetch($fetchStyle);
 }
+
 
 
 
