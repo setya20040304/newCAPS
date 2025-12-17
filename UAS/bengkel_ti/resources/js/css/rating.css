@@ -1,0 +1,229 @@
+/* Master Colour */
+:root {
+  --primary: #e07b39;
+  --primary_dark: #ce5d12;
+  --background: #010101;
+  --basic: #fff;
+  --basic_dark: #f4f0e6;
+}
+
+/* Install Font */
+@font-face {
+  font-family: Poppins-ExBold;
+  src: url(../fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+/* Inside View */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins";
+  margin: 0;
+  background-color: var(--background);
+  color: var(--basic);
+}
+
+.container {
+  width: 70%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.parent {
+  margin-top: 100px;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  overflow: hidden;
+  background: var(--background);
+  padding-left: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar .logo {
+  color: var(--basic);
+  font-size: 30px;
+  margin-left: 4%;
+  padding-left: 0;
+  text-align: left;
+  float: left;
+  position: absolute;
+}
+
+.navbar .logo span {
+  color: var(--primary);
+}
+
+.navbar .navigation {
+  float: right;
+  margin-top: 35px;
+}
+
+.navbar .navigation li {
+  float: right;
+  margin-left: 20px;
+  font-size: 18px;
+  display: block;
+}
+
+.navbar .navigation li a {
+  color: var(--basic);
+  text-decoration: none;
+  font-family: "Poppins";
+}
+
+.navbar .navigation li a:hover {
+  color: var(--primary);
+}
+
+.navbar .navigation li a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navigation li a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* Ulasan */
+.ulasan {
+  text-align: center;
+  background-image: url("../img/dark-wooden.jpg ");
+  background-size: cover;
+  position: relative;
+}
+
+.ulasan .row2 {
+  padding: 8rem 5rem;
+}
+
+.ulasan::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.ulasan::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 12%;
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.ulasan h1 {
+  font-size: 3em;
+  color: var(--primary);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0 10px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.card:hover {
+  background-color: #fff6e5;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 1.2em;
+  color: #5a3d2b;
+  margin-bottom: 10px;
+}
+
+.card .judul {
+  font-weight: bold;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card .stars {
+  color: #f39c12;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 0.7rem 1rem;
+  margin-top: 3rem;
+}
+
+footer .links {
+  margin-bottom: 0.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.1rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--background);
+  font-weight: 700;
+}
